@@ -3,10 +3,10 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://ersanyamarya.github.io/beeta-one-landing/",
+  "homepage": "/beeta-one-landing",
   "scripts": {
-    "predeploy": "npm run build && cp dist/index.html dist/404.html && cp dist/index.html dist/200.html",
-    "deploy": "gh-pages -d dist",
+    "predeploy": "npm run build && cp dist/index.html dist/404.html && cp dist/index.html dist/200.html && touch ./dist/.nojekyll",
+    "deploy": "gh-pages -d dist -t",
     "dev": "vite --host",
     "build": "tsc && vite build",
     "preview": "vite preview"
